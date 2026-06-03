@@ -32,7 +32,7 @@ M.get = function(colors, opts)
         CursorLine = { bg = colors.ui_1 },
         CursorLineNr = { fg = colors.gray_05, bg = bg, bold = opts.bold },
         Directory = { fg = colors.fg, bg = bg, bold = opts.bold },
-        EndOfBuffer = { fg = colors.gray_01, bg = bg },
+        EndOfBuffer = { fg = bg, bg = bg },
         ErrorMsg = { fg = colors.fg, bg = bg, bold = opts.bold, reverse = inverse },
         FoldColumn = { fg = colors.gray_14, bg = bg },
         Folded = { fg = colors.gray_05, bg = colors.ui_2, italic = opts.italic },

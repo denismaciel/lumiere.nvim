@@ -19,7 +19,7 @@ require('scholor').setup({
     bold = true,
     italic = false,
     inverse = true,
-    dim_inactive = false,
+    dim_inactive = true,
 })
 
 vim.cmd.colorscheme('scholor')
@@ -33,7 +33,7 @@ require('scholor').setup({
     italic = false,
     inverse = true,
     transparent = false,
-    dim_inactive = false,
+    dim_inactive = true,
     integrations = {
         blink = true,
         fff = true,

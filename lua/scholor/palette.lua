@@ -18,13 +18,13 @@ return {
     gray_20 = '#afafaf',
     gray_24 = '#d3d3d3',
     gray_26 = '#e4e4e4',
-    gray_28 = '#f6f6f6',
+    gray_28 = '#f1f1f1',
 
     ui_1 = '#dfddd7',
     ui_2 = '#dedcd6',
     ui_3 = '#d3d1cc',
     ui_4 = '#cac7bd',
-    ui_5 = '#b7b2a5',
+    ui_5 = '#aaa69a',
     ui_6 = '#a39e8d',
     ui_7 = '#908975',
 
