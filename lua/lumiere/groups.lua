@@ -13,10 +13,9 @@ M.get = function(colors, opts)
     local bg_nc = opts.transparent and colors.none or colors.bg_nc
     local inverse = opts.inverse
     local comments = merge({
-        fg = colors.fg,
+        fg = colors.gray_10,
         bg = bg,
         italic = opts.italic,
-        reverse = inverse,
     }, opts.styles.comments)
 
     return {
