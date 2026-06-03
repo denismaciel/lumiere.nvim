@@ -5,9 +5,9 @@ M.get = function(colors, opts)
     local bg = opts.transparent and colors.none or colors.bg
 
     if opts.integrations.gitsigns then
-        groups.GitSignsAdd = { fg = colors.green, bg = bg }
-        groups.GitSignsChange = { fg = colors.blue, bg = bg }
-        groups.GitSignsDelete = { fg = colors.red, bg = bg }
+        groups.GitSignsAdd = { fg = colors.gray_10, bg = bg }
+        groups.GitSignsChange = { fg = colors.gray_10, bg = bg }
+        groups.GitSignsDelete = { fg = colors.gray_10, bg = bg }
         groups.GitSignsAddInline = { fg = colors.green, bg = colors.green_bg }
         groups.GitSignsChangeInline = { fg = colors.blue, bg = colors.blue_bg }
         groups.GitSignsDeleteInline = { fg = colors.red, bg = colors.red_bg }

@@ -14,7 +14,7 @@ M.defaults = {
         snacks = true,
     },
     styles = {
-        comments = { italic = true, reverse = true },
+        comments = { italic = true },
         functions = { italic = true },
         keywords = { bold = true },
         types = { bold = true },
