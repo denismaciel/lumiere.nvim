@@ -37,7 +37,7 @@ M.get = function(colors, opts)
         FoldColumn = { fg = colors.gray_14, bg = bg },
         Folded = { fg = colors.gray_05, bg = colors.ui_2, italic = opts.italic },
         LineNr = { fg = colors.gray_15, bg = bg },
-        MatchParen = { fg = colors.blue, bg = colors.blue_bg, bold = opts.bold },
+        MatchParen = { fg = colors.gray_05, bg = bg, bold = opts.bold, reverse = opts.inverse },
         ModeMsg = { fg = colors.blue, bg = bg, bold = opts.bold },
         MoreMsg = { fg = colors.blue, bg = bg, bold = opts.bold },
         NonText = { fg = colors.gray_01, bg = bg },
