@@ -43,7 +43,7 @@ M.get = function(colors, opts)
         NonText = { fg = colors.gray_01, bg = bg },
         Question = { fg = colors.green, bg = bg, bold = opts.bold },
         SignColumn = { fg = colors.blue, bg = bg },
-        SpecialKey = { fg = colors.none, bg = colors.gray_01 },
+        SpecialKey = { fg = colors.gray_10, bg = bg },
         StatusLine = { fg = colors.black, bg = bg, underline = true },
         StatusLineNC = { fg = colors.ui_7, bg = bg, underline = true, italic = opts.italic },
         Substitute = { fg = colors.black, bg = colors.yellow, reverse = inverse },
