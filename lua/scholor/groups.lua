@@ -162,7 +162,7 @@ M.get = function(colors, opts)
         ['@keyword'] = { link = 'Keyword' },
         ['@keyword.conditional'] = { link = 'Keyword' },
         ['@keyword.coroutine'] = { link = 'Keyword' },
-        ['@keyword.exception'] = { link = 'Keyword' },
+        ['@keyword.exception'] = { fg = colors.red, bg = bg, bold = opts.bold },
         ['@keyword.function'] = { link = 'Keyword' },
         ['@keyword.import'] = { link = 'Keyword' },
         ['@keyword.operator'] = { link = 'Operator' },
