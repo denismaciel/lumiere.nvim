@@ -43,6 +43,9 @@ M.get = function(colors, opts)
         groups.FffNormal = { link = 'NormalFloat' }
         groups.FffBorder = { link = 'FloatBorder' }
         groups.FffMatch = { fg = colors.blue, bg = colors.blue_bg, bold = opts.bold }
+        groups.FffCursor = { fg = colors.fg, bg = colors.ui_2 }
+        groups.FffDirectoryPath = { fg = colors.gray_15, bg = bg }
+        groups.FffComment = { fg = colors.gray_14, bg = bg }
     end
 
     return groups
