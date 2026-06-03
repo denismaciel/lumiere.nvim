@@ -17,7 +17,7 @@ vim.pack.add({
 ```lua
 require('scholor').setup({
     bold = true,
-    italic = true,
+    italic = false,
     inverse = true,
     dim_inactive = false,
 })
@@ -30,7 +30,7 @@ vim.cmd.colorscheme('scholor')
 ```lua
 require('scholor').setup({
     bold = true,
-    italic = true,
+    italic = false,
     inverse = true,
     transparent = false,
     dim_inactive = false,
@@ -42,8 +42,8 @@ require('scholor').setup({
         snacks = true,
     },
     styles = {
-        comments = { italic = true },
-        functions = { italic = true },
+        comments = {},
+        functions = {},
         keywords = { bold = true },
         types = { bold = true },
     },

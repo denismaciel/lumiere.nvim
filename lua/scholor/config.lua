@@ -2,7 +2,7 @@ local M = {}
 
 M.defaults = {
     bold = true,
-    italic = true,
+    italic = false,
     inverse = true,
     transparent = false,
     dim_inactive = false,
@@ -14,8 +14,8 @@ M.defaults = {
         snacks = true,
     },
     styles = {
-        comments = { italic = true },
-        functions = { italic = true },
+        comments = {},
+        functions = {},
         keywords = { bold = true },
         types = { bold = true },
     },
