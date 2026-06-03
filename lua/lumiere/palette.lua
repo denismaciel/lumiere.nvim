@@ -29,6 +29,7 @@ return {
     ui_7 = '#908975',
 
     red = '#800013',
+    red_soft = '#8f4f58',
     red_bright = '#cc001e',
     red_bg = '#feb2bd',
     green = '#00802c',

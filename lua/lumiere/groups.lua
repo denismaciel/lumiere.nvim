@@ -64,8 +64,8 @@ M.get = function(colors, opts)
 
         Comment = comments,
         Constant = { fg = colors.fg, bg = bg, bold = opts.bold },
-        String = { fg = colors.fg, bg = bg, italic = opts.italic },
-        Character = { fg = colors.fg, bg = bg, italic = opts.italic },
+        String = { fg = colors.red_soft, bg = bg, italic = opts.italic },
+        Character = { fg = colors.red_soft, bg = bg, italic = opts.italic },
         Number = { fg = colors.fg, bg = bg, italic = opts.italic },
         Boolean = { fg = colors.fg, bg = bg, bold = opts.bold },
         Float = { fg = colors.fg, bg = bg, italic = opts.italic },
