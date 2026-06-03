@@ -1,34 +1,34 @@
-# scholor.nvim
+# lumiere.nvim
 
 A Neovim-only light colorscheme inspired by
 [lumiere.vim](https://github.com/alexanderjeurissen/lumiere.vim).
 
-Scholor keeps syntax mostly grayscale and reserves color for search, diffs,
+Lumiere keeps syntax mostly grayscale and reserves color for search, diffs,
 diagnostics, git state, and focused UI.
 
 ## Install
 
 ```lua
 vim.pack.add({
-    { src = 'https://github.com/denismaciel/lumiere.nvim', name = 'scholor.nvim' },
+    { src = 'https://github.com/denismaciel/lumiere.nvim', name = 'lumiere.nvim' },
 })
 ```
 
 ```lua
-require('scholor').setup({
+require('lumiere').setup({
     bold = true,
     italic = false,
     inverse = true,
     dim_inactive = true,
 })
 
-vim.cmd.colorscheme('scholor')
+vim.cmd.colorscheme('lumiere')
 ```
 
 ## Options
 
 ```lua
-require('scholor').setup({
+require('lumiere').setup({
     bold = true,
     italic = false,
     inverse = true,

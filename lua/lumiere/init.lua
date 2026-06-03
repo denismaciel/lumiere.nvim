@@ -1,7 +1,7 @@
-local config = require('scholor.config')
-local palette = require('scholor.palette')
-local groups = require('scholor.groups')
-local integrations = require('scholor.integrations')
+local config = require('lumiere.config')
+local palette = require('lumiere.palette')
+local groups = require('lumiere.groups')
+local integrations = require('lumiere.integrations')
 
 local M = {}
 
@@ -14,7 +14,7 @@ M.load = function(opts)
 
     vim.o.background = 'light'
     vim.o.termguicolors = true
-    vim.g.colors_name = 'scholor'
+    vim.g.colors_name = 'lumiere'
 
     if vim.fn.exists('syntax_on') == 1 then
         vim.cmd.syntax('reset')

@@ -2,8 +2,8 @@
 set -euo pipefail
 
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-title="scholor-snapshot"
-snapshot="$repo/scholor_snapshot.png"
+title="lumiere-snapshot"
+snapshot="$repo/lumiere_snapshot.png"
 comparison="$repo/lumiere_comparison.png"
 
 ghostty \
@@ -39,8 +39,8 @@ niri msg action close-window --id "$window_id" >/dev/null || true
 
 nix shell nixpkgs#imagemagick -c sh -lc "
   magick '$repo/lumiere_dim_inactive.png' -resize x1400 /tmp/lumiere_original_resized.png
-  magick '$snapshot' -resize x1400 /tmp/scholor_snapshot_resized.png
-  magick /tmp/lumiere_original_resized.png /tmp/scholor_snapshot_resized.png +append '$comparison'
+  magick '$snapshot' -resize x1400 /tmp/lumiere_snapshot_resized.png
+  magick /tmp/lumiere_original_resized.png /tmp/lumiere_snapshot_resized.png +append '$comparison'
 "
 
 echo "$snapshot"

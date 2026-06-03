@@ -8,6 +8,6 @@ exec nvim --clean \
   "+set runtimepath^=$repo" \
   '+set laststatus=2 showtabline=0 signcolumn=no' \
   '+lua vim.diagnostic.enable(false)' \
-  "+source $repo/colors/scholor.lua" \
+  "+source $repo/colors/lumiere.lua" \
   '+windo set number relativenumber signcolumn=no' \
   '+wincmd ='
