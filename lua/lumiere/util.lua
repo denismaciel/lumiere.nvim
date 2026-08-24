@@ -26,7 +26,7 @@ function M.blend(fg, bg, alpha)
 end
 
 function M.blend_bg(color, alpha, colors, opts)
-    return M.blend(color, colors.bg, alpha)
+    return M.blend(color, colors.background, alpha)
 end
 
 function M.style(enabled, value)
