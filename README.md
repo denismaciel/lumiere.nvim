@@ -6,6 +6,8 @@ A Neovim-only light and dark colorscheme inspired by
 Lumiere keeps syntax mostly grayscale and reserves color for search, diffs,
 diagnostics, git state, and focused UI. Its light palette resembles warm paper;
 the dark palette is the same restrained, warm-neutral system after nightfall.
+Text, punctuation, chrome, and layered surfaces use separate contrast steps so
+the editor stays legible without flattening everything into equal emphasis.
 
 ## Install
 

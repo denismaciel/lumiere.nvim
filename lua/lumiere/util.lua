@@ -13,13 +13,33 @@ local function rgb_to_hex(rgb)
     return string.format('#%02x%02x%02x', rgb[1], rgb[2], rgb[3])
 end
 
+local function srgb_to_linear(channel)
+    local value = channel / 255
+    if value <= 0.04045 then
+        return value / 12.92
+    end
+    return ((value + 0.055) / 1.055) ^ 2.4
+end
+
+local function linear_to_srgb(channel)
+    local value
+    if channel <= 0.0031308 then
+        value = channel * 12.92
+    else
+        value = (1.055 * (channel ^ (1 / 2.4))) - 0.055
+    end
+    return math.floor((math.max(0, math.min(1, value)) * 255) + 0.5)
+end
+
 function M.blend(fg, bg, alpha)
     local foreground = hex_to_rgb(fg)
     local background = hex_to_rgb(bg)
     local blended = {}
 
     for i = 1, 3 do
-        blended[i] = math.floor((alpha * foreground[i]) + ((1 - alpha) * background[i]) + 0.5)
+        local foreground_linear = srgb_to_linear(foreground[i])
+        local background_linear = srgb_to_linear(background[i])
+        blended[i] = linear_to_srgb((alpha * foreground_linear) + ((1 - alpha) * background_linear))
     end
 
     return rgb_to_hex(blended)

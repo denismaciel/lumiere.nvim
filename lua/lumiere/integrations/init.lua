@@ -36,7 +36,8 @@ M.get = function(colors, opts)
         groups.SnacksPicker = { link = 'NormalFloat' }
         groups.SnacksPickerBorder = { link = 'FloatBorder' }
         groups.SnacksPickerMatch = { fg = colors.blue, bg = colors.blue_bg, bold = opts.bold }
-        groups.SnacksPickerSelected = { fg = colors.text, bg = colors.surface_raised, bold = opts.bold }
+        groups.SnacksPickerSelected =
+            { fg = colors.text, bg = colors.surface_raised, bold = opts.bold }
     end
 
     if opts.integrations.fff then
