@@ -1,47 +1,15 @@
-return {
-    none = 'NONE',
+local palette_files = vim.api.nvim_get_runtime_file('palette.json', false)
+local palette_file = assert(palette_files[1], 'lumiere.nvim: palette.json not found')
+local palettes = vim.json.decode(table.concat(vim.fn.readfile(palette_file), '\n'))
 
-    black = '#000000',
-    white = '#ffffff',
+local M = {}
 
-    bg = '#f1f1f1',
-    bg_nc = '#e4e4e4',
-    bg_error = '#faf1f1',
-    fg = '#424242',
+M.get = function(variant)
+    local colors = palettes[variant]
+    assert(colors, 'lumiere.nvim: unknown variant ' .. vim.inspect(variant))
+    return vim.deepcopy(colors)
+end
 
-    gray_01 = '#080808',
-    gray_03 = '#1a1a1a',
-    gray_05 = '#2b2b2b',
-    gray_10 = '#575757',
-    gray_14 = '#7b7b7b',
-    gray_15 = '#838383',
-    gray_20 = '#afafaf',
-    gray_24 = '#d3d3d3',
-    gray_26 = '#e4e4e4',
-    gray_28 = '#f1f1f1',
+M.all = vim.deepcopy(palettes)
 
-    ui_1 = '#dfddd7',
-    ui_2 = '#dedcd6',
-    ui_3 = '#d3d1cc',
-    ui_4 = '#cac7bd',
-    ui_5 = '#aaa69a',
-    ui_6 = '#a39e8d',
-    ui_7 = '#908975',
-
-    red = '#800013',
-    red_soft = '#8f4f58',
-    red_bright = '#cc001e',
-    red_bg = '#feb2bd',
-    green = '#00802c',
-    green_bg = '#b2fecc',
-    blue = '#001280',
-    blue_bright = '#405aff',
-    blue_bg = '#b2bdfe',
-    blue_bg_soft = '#d8defe',
-    magenta = '#410080',
-    magenta_bg = '#d9b2fe',
-    yellow = '#ffda40',
-    yellow_bg = '#fff7d8',
-    orange = '#cc4c00',
-    orange_bg = '#ffc5a3',
-}
+return M

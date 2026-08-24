@@ -1,6 +1,7 @@
 local M = {}
 
 M.defaults = {
+    variant = 'light',
     bold = true,
     italic = false,
     inverse = true,

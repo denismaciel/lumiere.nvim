@@ -1,6 +1,6 @@
 # lumiere.nvim
 
-A Neovim-only light colorscheme inspired by
+A Neovim-only light and dark colorscheme inspired by
 [lumiere.vim](https://github.com/alexanderjeurissen/lumiere.vim).
 
 Lumiere keeps syntax mostly grayscale and reserves color for search, diffs,
@@ -16,6 +16,7 @@ vim.pack.add({
 
 ```lua
 require('lumiere').setup({
+    variant = 'light',
     bold = true,
     italic = false,
     inverse = true,
@@ -29,6 +30,7 @@ vim.cmd.colorscheme('lumiere')
 
 ```lua
 require('lumiere').setup({
+    variant = 'light', -- 'light' or 'dark'
     bold = true,
     italic = false,
     inverse = true,

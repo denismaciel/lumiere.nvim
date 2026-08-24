@@ -1,5 +1,5 @@
 local config = require('lumiere.config')
-local palette = require('lumiere.palette')
+local palettes = require('lumiere.palette')
 local groups = require('lumiere.groups')
 local integrations = require('lumiere.integrations')
 
@@ -12,7 +12,10 @@ M.load = function(opts)
         config.setup(opts)
     end
 
-    vim.o.background = 'light'
+    local variant = config.options.variant
+    local palette = palettes.get(variant)
+
+    vim.o.background = variant
     vim.o.termguicolors = true
     vim.g.colors_name = 'lumiere'
 
@@ -33,6 +36,7 @@ M.load = function(opts)
     end
 end
 
-M.colors = palette
+M.colors = palettes.get('light')
+M.palettes = palettes.all
 
 return M
