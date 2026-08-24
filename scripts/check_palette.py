@@ -312,22 +312,18 @@ def render_preview(palettes: dict[str, dict[str, str]]) -> str:
             f'<rect x="{sample_x}" y="112" width="514" height="198" rx="10" fill="{colors["surface"]}" stroke="{colors["border"]}"/>'
         )
         code_lines = (
-            ("declaration", "local palette = require('lumiere.palette')", colors["text"], "700"),
+            ("declaration", "class Palette:", colors["blue"], "700"),
             ("comment", "-- color supports meaning, never noise", colors["text_muted"], "400"),
-            ("control", "if palette.ready then", colors["text"], "700"),
-            ("body", "  return palette.light", colors["text"], "400"),
-            ("punctuation", "end  {} [] () , . :", colors["punctuation"], "400"),
-            ("diagnostic", "warning   error", colors["orange"], "700"),
+            ("control", "if palette.ready:", colors["magenta"], "700"),
+            ("string", "  name = 'lumiere'", colors["green"], "400"),
+            ("type", "  variant: Theme", colors["cyan"], "400"),
+            ("number", "  contrast = 8.9", colors["orange"], "400"),
         )
         for line_index, (_, label, color, weight) in enumerate(code_lines):
             y = 143 + (line_index * 27)
             output.append(
                 f'<text x="{sample_x + 20}" y="{y}" fill="{color}" font-family="ui-monospace, monospace" font-size="15" font-weight="{weight}">{label}</text>'
             )
-        output.append(
-            f'<text x="{sample_x + 110}" y="278" fill="{colors["red"]}" font-family="ui-monospace, monospace" font-size="15" font-weight="700">error</text>'
-        )
-
         output.append(
             f'<text x="{sample_x}" y="344" fill="{colors["text_secondary"]}" font-family="ui-monospace, monospace" font-size="13">ACCENTS + DIFF SURFACES</text>'
         )

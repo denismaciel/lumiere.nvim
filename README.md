@@ -3,14 +3,15 @@
 A Neovim-only light and dark colorscheme inspired by
 [lumiere.vim](https://github.com/alexanderjeurissen/lumiere.vim).
 
-Lumiere keeps syntax mostly grayscale and reserves color for search, diffs,
-diagnostics, git state, and focused UI. Its light palette resembles warm paper;
-the dark palette is the same restrained, warm-neutral system after nightfall.
+Lumiere keeps its canvas and interface restrained while using calibrated color
+for semantic syntax, search, diffs, diagnostics, git state, and focused UI. Its
+light palette resembles warm paper; the dark palette is the same restrained,
+warm-neutral system after nightfall.
 Text, punctuation, chrome, and layered surfaces use separate contrast steps so
 the editor stays legible without flattening everything into equal emphasis.
-Accent hues share perceptual lightness and retain stable meanings: red errors,
-orange warnings, yellow search, green success, blue information, and magenta
-rare or exceptional state. Ordinary syntax, including strings, stays neutral.
+Accent hues share perceptual lightness and retain stable meanings. Syntax uses
+magenta keywords, cyan types and modules, blue functions and declarations,
+green strings, and orange numbers. Red remains reserved for errors.
 
 ## Install
 

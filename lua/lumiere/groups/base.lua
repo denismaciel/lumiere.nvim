@@ -12,12 +12,12 @@ M.get = function(colors, opts)
         italic = opts.italic,
     }, opts.styles.comments)
     local control_flow = util.syntax_style(
-        { fg = colors.text, bg = bg, bold = true },
+        { fg = colors.magenta, bg = bg, bold = true },
         opts.styles.control_flow,
         opts.bold
     )
     local declarations = util.syntax_style(
-        { fg = colors.text, bg = bg, bold = true },
+        { fg = colors.blue, bg = bg, bold = true },
         opts.styles.declarations,
         opts.bold
     )
@@ -81,34 +81,38 @@ M.get = function(colors, opts)
         LumiereDeclaration = declarations,
 
         Comment = comments,
-        Constant = { fg = colors.text, bg = bg },
-        String = { fg = colors.text, bg = bg, italic = opts.italic },
-        Character = { fg = colors.text, bg = bg, italic = opts.italic },
-        Number = { fg = colors.text, bg = bg, italic = opts.italic },
-        Boolean = { fg = colors.text, bg = bg },
-        Float = { fg = colors.text, bg = bg, italic = opts.italic },
+        Constant = { fg = colors.yellow, bg = bg },
+        String = { fg = colors.green, bg = bg, italic = opts.italic },
+        Character = { fg = colors.green, bg = bg, italic = opts.italic },
+        Number = { fg = colors.orange, bg = bg, italic = opts.italic },
+        Boolean = { fg = colors.orange, bg = bg },
+        Float = { fg = colors.orange, bg = bg, italic = opts.italic },
         Identifier = { fg = colors.text, bg = bg, italic = opts.italic },
         Function = util.merge(
-            { fg = colors.text, bg = bg, italic = opts.italic },
+            { fg = colors.blue, bg = bg, italic = opts.italic },
             opts.styles.functions
         ),
-        Statement = { fg = colors.text, bg = bg },
+        Statement = { fg = colors.magenta, bg = bg },
         Conditional = { link = 'LumiereControlFlow' },
         Repeat = { link = 'LumiereControlFlow' },
         Label = { link = 'LumiereDeclaration' },
-        Operator = { fg = colors.text, bg = bg },
-        Keyword = util.syntax_style({ fg = colors.text, bg = bg }, opts.styles.keywords, opts.bold),
+        Operator = { fg = colors.punctuation, bg = bg },
+        Keyword = util.syntax_style(
+            { fg = colors.magenta, bg = bg },
+            opts.styles.keywords,
+            opts.bold
+        ),
         Exception = { link = 'LumiereControlFlow' },
-        PreProc = { fg = colors.text, bg = bg },
-        Include = { fg = colors.text, bg = bg, italic = opts.italic },
+        PreProc = { fg = colors.magenta, bg = bg },
+        Include = { fg = colors.magenta, bg = bg, italic = opts.italic },
         Define = { link = 'LumiereDeclaration' },
         Macro = { link = 'LumiereDeclaration' },
         PreCondit = { fg = colors.text_muted, bg = bg, italic = opts.italic },
-        Type = util.syntax_style({ fg = colors.text, bg = bg }, opts.styles.types, opts.bold),
+        Type = util.syntax_style({ fg = colors.cyan, bg = bg }, opts.styles.types, opts.bold),
         StorageClass = { link = 'LumiereDeclaration' },
         Structure = { link = 'LumiereDeclaration' },
         Typedef = { link = 'LumiereDeclaration' },
-        Special = { fg = colors.text, bg = bg, italic = opts.italic },
+        Special = { fg = colors.magenta, bg = bg, italic = opts.italic },
         Underlined = { fg = colors.text, bg = bg, underline = true },
         Error = { fg = colors.red, bg = bg, bold = opts.bold, reverse = inverse },
         Todo = {
