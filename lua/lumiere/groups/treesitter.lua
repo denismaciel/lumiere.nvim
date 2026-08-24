@@ -5,7 +5,7 @@ local M = {}
 M.get = function(colors, opts)
     local bg = opts.transparent and colors.none or colors.background
     local heading_bg = {
-        util.blend(colors.blue_bg_soft, colors.background, 0.45),
+        util.blend(colors.blue_bg, colors.background, 0.45),
         util.blend(colors.green_bg, colors.background, 0.25),
         util.blend(colors.yellow_bg, colors.background, 0.45),
         util.blend(colors.magenta_bg, colors.background, 0.25),

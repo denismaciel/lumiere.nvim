@@ -8,6 +8,9 @@ diagnostics, git state, and focused UI. Its light palette resembles warm paper;
 the dark palette is the same restrained, warm-neutral system after nightfall.
 Text, punctuation, chrome, and layered surfaces use separate contrast steps so
 the editor stays legible without flattening everything into equal emphasis.
+Accent hues share perceptual lightness and retain stable meanings: red errors,
+orange warnings, yellow search, green success, blue information, and magenta
+rare or exceptional state. Ordinary syntax, including strings, stays neutral.
 
 ## Install
 
