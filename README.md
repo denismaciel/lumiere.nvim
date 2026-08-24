@@ -4,7 +4,8 @@ A Neovim-only light and dark colorscheme inspired by
 [lumiere.vim](https://github.com/alexanderjeurissen/lumiere.vim).
 
 Lumiere keeps syntax mostly grayscale and reserves color for search, diffs,
-diagnostics, git state, and focused UI.
+diagnostics, git state, and focused UI. Its light palette resembles warm paper;
+the dark palette is the same restrained, warm-neutral system after nightfall.
 
 ## Install
 
