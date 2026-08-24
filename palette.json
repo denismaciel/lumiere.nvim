@@ -35,7 +35,23 @@
     "blue_bg": "#dae6f5",
     "magenta": "#784b8b",
     "magenta_bg": "#ebe0f0",
-    "search_bg": "#f3d45a"
+    "search_bg": "#f3d45a",
+    "ansi_black": "#20201f",
+    "ansi_red": "#993f43",
+    "ansi_green": "#386f3b",
+    "ansi_yellow": "#765d00",
+    "ansi_blue": "#31619d",
+    "ansi_magenta": "#784b8b",
+    "ansi_cyan": "#0f6d76",
+    "ansi_white": "#706e69",
+    "ansi_bright_black": "#66645f",
+    "ansi_bright_red": "#a82c38",
+    "ansi_bright_green": "#1a7426",
+    "ansi_bright_yellow": "#7a5c00",
+    "ansi_bright_blue": "#025eb8",
+    "ansi_bright_magenta": "#813c9d",
+    "ansi_bright_cyan": "#00707c",
+    "ansi_bright_white": "#424242"
   },
   "dark": {
     "none": "NONE",
@@ -73,6 +89,22 @@
     "blue_bg": "#223144",
     "magenta": "#bb8cd1",
     "magenta_bg": "#382a3e",
-    "search_bg": "#d8b84f"
+    "search_bg": "#d8b84f",
+    "ansi_black": "#1b1a18",
+    "ansi_red": "#e38182",
+    "ansi_green": "#79b27a",
+    "ansi_yellow": "#ba9f54",
+    "ansi_blue": "#71a4e5",
+    "ansi_magenta": "#bb8cd1",
+    "ansi_cyan": "#60b0b9",
+    "ansi_white": "#d8d3c9",
+    "ansi_bright_black": "#77736d",
+    "ansi_bright_red": "#ff9798",
+    "ansi_bright_green": "#81d584",
+    "ansi_bright_yellow": "#e1b942",
+    "ansi_bright_blue": "#86c1ff",
+    "ansi_bright_magenta": "#e49cff",
+    "ansi_bright_cyan": "#2ad5e5",
+    "ansi_bright_white": "#fffaf0"
   }
 }

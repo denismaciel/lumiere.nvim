@@ -64,6 +64,9 @@ By default bold is reserved for control flow and declarations. Set
 `bold = false` to remove theme-supplied bold everywhere, or override a specific
 entry under `styles`.
 
+The canonical palette also defines all 16 ANSI slots. Lumiere applies them to
+Neovim terminals, including distinct cyan and bright variants.
+
 ## Credits
 
 Inspired by Alexander Jeurissen's `lumiere.vim`.
