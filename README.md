@@ -67,6 +67,17 @@ entry under `styles`.
 The canonical palette also defines all 16 ANSI slots. Lumiere applies them to
 Neovim terminals, including distinct cyan and bright variants.
 
+## Quality checks
+
+```sh
+uv run scripts/check_palette.py
+nvim --clean --headless -l tests/highlights.lua
+```
+
+The first check enforces schema parity, semantic roles, WCAG contrast bands,
+OKLCH relationships, CVD-safe legibility, distinct ANSI slots, and the reviewed
+SVG snapshot at `tests/snapshots/palette.svg`.
+
 ## Credits
 
 Inspired by Alexander Jeurissen's `lumiere.vim`.
