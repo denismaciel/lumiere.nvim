@@ -11,6 +11,16 @@ M.get = function(colors, opts)
         bg = bg,
         italic = opts.italic,
     }, opts.styles.comments)
+    local control_flow = util.syntax_style(
+        { fg = colors.text, bg = bg, bold = true },
+        opts.styles.control_flow,
+        opts.bold
+    )
+    local declarations = util.syntax_style(
+        { fg = colors.text, bg = bg, bold = true },
+        opts.styles.declarations,
+        opts.bold
+    )
 
     return {
         Normal = { fg = colors.text, bg = bg },
@@ -30,7 +40,7 @@ M.get = function(colors, opts)
         FoldColumn = { fg = colors.text_secondary, bg = bg },
         Folded = { fg = colors.punctuation, bg = colors.surface_raised, italic = opts.italic },
         LineNr = { fg = colors.text_faint, bg = bg },
-        MatchParen = { fg = colors.punctuation, bg = bg, bold = opts.bold, reverse = opts.inverse },
+        MatchParen = { fg = colors.punctuation, bg = bg, reverse = opts.inverse },
         ModeMsg = { fg = colors.blue, bg = bg, bold = opts.bold },
         MoreMsg = { fg = colors.blue, bg = bg, bold = opts.bold },
         NonText = { fg = colors.text_invisible, bg = bg },
@@ -67,34 +77,37 @@ M.get = function(colors, opts)
             reverse = inverse,
         },
 
+        LumiereControlFlow = control_flow,
+        LumiereDeclaration = declarations,
+
         Comment = comments,
-        Constant = { fg = colors.text, bg = bg, bold = opts.bold },
+        Constant = { fg = colors.text, bg = bg },
         String = { fg = colors.text, bg = bg, italic = opts.italic },
         Character = { fg = colors.text, bg = bg, italic = opts.italic },
         Number = { fg = colors.text, bg = bg, italic = opts.italic },
-        Boolean = { fg = colors.text, bg = bg, bold = opts.bold },
+        Boolean = { fg = colors.text, bg = bg },
         Float = { fg = colors.text, bg = bg, italic = opts.italic },
         Identifier = { fg = colors.text, bg = bg, italic = opts.italic },
         Function = util.merge(
             { fg = colors.text, bg = bg, italic = opts.italic },
             opts.styles.functions
         ),
-        Statement = { fg = colors.text, bg = bg, bold = opts.bold },
-        Conditional = { fg = colors.text, bg = bg, bold = opts.bold },
-        Repeat = { fg = colors.text, bg = bg, bold = opts.bold },
-        Label = { fg = colors.text, bg = bg, bold = opts.bold },
+        Statement = { fg = colors.text, bg = bg },
+        Conditional = { link = 'LumiereControlFlow' },
+        Repeat = { link = 'LumiereControlFlow' },
+        Label = { link = 'LumiereDeclaration' },
         Operator = { fg = colors.text, bg = bg },
-        Keyword = util.merge({ fg = colors.text, bg = bg, bold = opts.bold }, opts.styles.keywords),
-        Exception = { fg = colors.text, bg = bg, bold = opts.bold },
-        PreProc = { fg = colors.text, bg = bg, bold = opts.bold },
+        Keyword = util.syntax_style({ fg = colors.text, bg = bg }, opts.styles.keywords, opts.bold),
+        Exception = { link = 'LumiereControlFlow' },
+        PreProc = { fg = colors.text, bg = bg },
         Include = { fg = colors.text, bg = bg, italic = opts.italic },
-        Define = { fg = colors.text, bg = bg, bold = opts.bold },
-        Macro = { fg = colors.text, bg = bg, bold = opts.bold },
+        Define = { link = 'LumiereDeclaration' },
+        Macro = { link = 'LumiereDeclaration' },
         PreCondit = { fg = colors.text_muted, bg = bg, italic = opts.italic },
-        Type = util.merge({ fg = colors.text, bg = bg, bold = opts.bold }, opts.styles.types),
-        StorageClass = { fg = colors.text, bg = bg, bold = opts.bold },
-        Structure = { fg = colors.text, bg = bg, bold = opts.bold },
-        Typedef = { fg = colors.text, bg = bg, italic = opts.italic },
+        Type = util.syntax_style({ fg = colors.text, bg = bg }, opts.styles.types, opts.bold),
+        StorageClass = { link = 'LumiereDeclaration' },
+        Structure = { link = 'LumiereDeclaration' },
+        Typedef = { link = 'LumiereDeclaration' },
         Special = { fg = colors.text, bg = bg, italic = opts.italic },
         Underlined = { fg = colors.text, bg = bg, underline = true },
         Error = { fg = colors.red, bg = bg, bold = opts.bold, reverse = inverse },

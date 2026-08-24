@@ -57,4 +57,12 @@ function M.merge(base, extra)
     return vim.tbl_extend('force', base, extra or {})
 end
 
+function M.syntax_style(base, style, bold_enabled)
+    local result = M.merge(base, style)
+    if not bold_enabled then
+        result.bold = nil
+    end
+    return result
+end
+
 return M

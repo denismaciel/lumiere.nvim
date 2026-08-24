@@ -16,9 +16,11 @@ M.defaults = {
     },
     styles = {
         comments = {},
+        control_flow = { bold = true },
+        declarations = { bold = true },
         functions = {},
-        keywords = { bold = true },
-        types = { bold = true },
+        keywords = {},
+        types = {},
     },
 }
 

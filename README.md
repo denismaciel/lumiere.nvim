@@ -51,12 +51,18 @@ require('lumiere').setup({
     },
     styles = {
         comments = {},
+        control_flow = { bold = true },
+        declarations = { bold = true },
         functions = {},
-        keywords = { bold = true },
-        types = { bold = true },
+        keywords = {},
+        types = {},
     },
 })
 ```
+
+By default bold is reserved for control flow and declarations. Set
+`bold = false` to remove theme-supplied bold everywhere, or override a specific
+entry under `styles`.
 
 ## Credits
 
