@@ -38,9 +38,9 @@ M.get = function(colors, opts)
         SignColumn = { fg = colors.blue, bg = bg },
         SpecialKey = { fg = colors.gray_10, bg = bg },
         LumiereCodeBlockLine = { bg = colors.ui_2 },
-        StatusLine = { fg = colors.black, bg = bg, underline = true },
+        StatusLine = { fg = colors.strong_fg, bg = bg, underline = true },
         StatusLineNC = { fg = colors.ui_7, bg = bg, underline = true, italic = opts.italic },
-        Substitute = { fg = colors.black, bg = colors.yellow, reverse = inverse },
+        Substitute = { fg = colors.on_yellow, bg = colors.yellow, reverse = inverse },
         TabLine = { fg = colors.ui_5, bg = bg },
         TabLineFill = { bg = bg },
         TabLineSel = { fg = colors.gray_28, bg = colors.ui_3, bold = opts.bold },
@@ -53,9 +53,9 @@ M.get = function(colors, opts)
         WildMenu = { fg = colors.blue, bg = colors.white, bold = opts.bold, reverse = inverse },
         WinSeparator = { fg = colors.ui_5, bg = bg },
 
-        Search = { fg = colors.black, bg = colors.yellow },
-        IncSearch = { fg = colors.black, bg = colors.yellow, reverse = inverse },
-        CurSearch = { fg = colors.black, bg = colors.none, bold = opts.bold, reverse = inverse },
+        Search = { fg = colors.on_yellow, bg = colors.yellow },
+        IncSearch = { fg = colors.on_yellow, bg = colors.yellow, reverse = inverse },
+        CurSearch = { fg = colors.strong_fg, bg = colors.none, bold = opts.bold, reverse = inverse },
 
         Comment = comments,
         Constant = { fg = colors.fg, bg = bg, bold = opts.bold },
@@ -97,7 +97,7 @@ M.get = function(colors, opts)
         },
 
         Pmenu = { fg = colors.fg, bg = colors.ui_5 },
-        PmenuSel = { fg = colors.white, bg = colors.fg, bold = opts.bold },
+        PmenuSel = { fg = colors.bg, bg = colors.fg, bold = opts.bold },
         PmenuKind = { fg = colors.blue, bg = colors.ui_5 },
         PmenuExtra = { fg = colors.gray_10, bg = colors.ui_5 },
         PmenuSbar = { bg = colors.ui_5 },
