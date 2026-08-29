@@ -24,12 +24,20 @@ M.get = function(colors, opts)
 
     if opts.integrations.nvim_tree then
         groups.NvimTreeNormal = { fg = colors.text, bg = bg }
-        groups.NvimTreeNormalNC = { fg = colors.text, bg = bg }
-        groups.NvimTreeFolderName = { fg = colors.text, bg = bg, bold = opts.bold }
-        groups.NvimTreeOpenedFolderName = { fg = colors.text, bg = bg, bold = opts.bold }
-        groups.NvimTreeGitDirty = { fg = colors.orange, bg = bg }
-        groups.NvimTreeGitNew = { fg = colors.green, bg = bg }
-        groups.NvimTreeGitDeleted = { fg = colors.red, bg = bg }
+        groups.NvimTreeNormalNC = { fg = colors.text_secondary, bg = bg }
+        groups.NvimTreeCursorLine = { bg = colors.blue_bg }
+        groups.NvimTreeFolderName = { fg = colors.text_strong, bold = opts.bold }
+        groups.NvimTreeOpenedFolderName = { fg = colors.blue, bold = opts.bold }
+        groups.NvimTreeRootFolder = { fg = colors.text_strong, bold = opts.bold }
+        groups.NvimTreeFolderIcon = { fg = colors.blue }
+        groups.NvimTreeIndentMarker = { fg = colors.text_invisible }
+        groups.NvimTreeSymlink = { fg = colors.text_faint, italic = opts.italic }
+        groups.NvimTreeSpecialFile = { fg = colors.text_strong, bold = opts.bold }
+        groups.NvimTreeWinSeparator = { fg = colors.border, bg = bg }
+        groups.NvimTreeGitDirty = { fg = colors.orange }
+        groups.NvimTreeGitNew = { fg = colors.green }
+        groups.NvimTreeGitDeleted = { fg = colors.red }
+        groups.NvimTreeGitIgnored = { fg = colors.text_faint }
     end
 
     if opts.integrations.snacks then
