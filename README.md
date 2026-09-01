@@ -12,6 +12,8 @@ the editor stays legible without flattening everything into equal emphasis.
 Accent hues share perceptual lightness and retain stable meanings. Syntax uses
 magenta keywords, cyan types and modules, blue functions and declarations,
 green strings, and orange numbers. Red remains reserved for errors.
+Markdown heading levels use the six non-error accents with matching subtle
+background tints, making document hierarchy visible at a glance.
 
 ## Install
 

@@ -12,6 +12,14 @@ M.get = function(colors, opts)
         util.blend(colors.orange_bg, colors.background, 0.22),
         util.blend(colors.background_inactive, colors.background, 0.55),
     }
+    local heading_fg = {
+        colors.blue,
+        colors.green,
+        colors.yellow,
+        colors.magenta,
+        colors.orange,
+        colors.cyan,
+    }
 
     local groups = {
         ['@annotation'] = { link = 'PreProc' },
@@ -104,7 +112,7 @@ M.get = function(colors, opts)
 
     for level, level_bg in ipairs(heading_bg) do
         groups['@markup.heading.' .. level .. '.markdown'] = {
-            fg = colors.text,
+            fg = heading_fg[level],
             bg = level_bg,
             bold = opts.bold,
         }

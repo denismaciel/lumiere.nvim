@@ -37,6 +37,10 @@ for _, variant in ipairs({ 'light', 'dark' }) do
     assert(highlight('Number').fg == color(palette.orange))
     assert(highlight('Constant').fg == color(palette.yellow))
 
+    for level, name in ipairs({ 'blue', 'green', 'yellow', 'magenta', 'orange', 'cyan' }) do
+        assert(highlight('@markup.heading.' .. level .. '.markdown').fg == color(palette[name]))
+    end
+
     assert(not highlight('Constant').bold)
     assert(not highlight('Keyword').bold)
     assert(not highlight('Type').bold)
